@@ -1,0 +1,16 @@
+from tkinter import *
+from time import strftime
+
+myWindow =Tk()
+myWindow.title("Digital clock")
+
+def time():
+    myTime=strftime("%H:%M:%S %p")
+    clock.config(text=myTime)
+    clock.after(1000,time)
+    
+clock=Label(myWindow, font = ('arial',40,'bold'),background='dark green',foreground='#fff')
+clock.pack(anchor='center')
+time()
+
+mainloop()
